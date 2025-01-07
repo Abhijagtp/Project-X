@@ -1,0 +1,217 @@
+.cover {
+  background: url("https://marketplace.canva.com/EAE2cQaUHVA/1/0/1600w/canva-black-minimal-motivation-quote-linkedin-banner-HoRi-2buBWk.jpg")
+    no-repeat center;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+}
+
+.profile-section {
+  margin-top: -75px;
+}
+/* Profile Container with Gradient Background */
+.profile-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #6224e4, #09e4f8); /* Gradient Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  /* border: 3px solid #fff; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-container img.profile-pic {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 3px solid #fff; */
+  z-index: 2;
+}
+
+/* Camera Icon */
+.profile-container .camera-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-container .camera-icon:hover {
+  background: #333;
+}
+
+.btn-edit-profile {
+  background: linear-gradient(45deg, #6224e4, #09e4f8);
+  color: white;
+  border-radius: 20px;
+  width: 200px;
+  border: none;
+}
+.btn-outline-dark {
+  padding: 10px 40px;
+  border-radius: 30px;
+}
+.buttoncontainer {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs {
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+}
+
+.tab-item {
+  margin-right: 20px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.tab-item:hover,
+.active-tab {
+  border-bottom: 3px solid #000000;
+  color: #05050f;
+}
+
+.blog-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* Enhanced shadow */
+  position: relative;
+  margin-bottom: 20px;
+  height: 300px;
+  /* Fixed height for the card */
+}
+.edit-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #242424; /* Gray background */
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 25px; /* Circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2; /* Ensure the icon stays above other content */
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  /* Ensures the image covers the full card height */
+  object-fit: cover;
+  /* Ensures the image fills the space without stretching */
+}
+
+.blog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* Dark overlay */
+}
+
+.blog-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  /* background: rgba(255, 255, 255, 0.093); */
+  /* Semi-transparent background */
+  color: white;
+}
+
+.blog-footer .likes {
+  color: white;
+  /* Ensures the likes text is white */
+}
+
+.blog-footer i {
+  color: white;
+  /* Ensures the icons are white */
+}
+.add-experience-btn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+
+.add-experience-btn button {
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    margin-top: -50px;
+    text-align: center;
+  }
+
+  .profile-container {
+    left: 50%;
+    transform: translateX(0%);
+  }
+
+  /* .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  } */
+
+  .tab-item {
+    margin-right: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  .btn-outline-dark {
+    padding: 10px 10px;
+    border-radius: 30px;
+  }
+  
+  
+}

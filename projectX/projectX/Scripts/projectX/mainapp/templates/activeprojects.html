@@ -1,0 +1,138 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Tasks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   
+</head> -->
+<body>
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <div class="container my-5">
+        <h2 class="mb-4">Good Morning! John</h2>
+        <p>Start your day by checking today's tasks and updates</p>
+
+        <!-- Status Cards Section -->
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="status-card bg-light">
+                    <div class="status-header">
+                        <div class="status-icon text-success">✅</div>
+                        <div>
+                            <p class="status-count">75</p>
+                            <p class="status-label">projects</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="status-footer">
+                        <p>Completed projects</p>
+                        <div class="status-percentage bg-success-percentage">100%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card bg-light active">
+                    <div class="status-header">
+                        <div class="status-icon text-warning">📊</div>
+                        <div>
+                            <p class="status-count">20</p>
+                            <p class="status-label">projects</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="status-footer">
+                        <p>Active projects</p>
+                        <div class="status-percentage bg-warning-percentage">20%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card bg-light">
+                    <div class="status-header">
+                        <div class="status-icon text-danger">⏳</div>
+                        <div>
+                            <p class="status-count">30</p>
+                            <p class="status-label">projects</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="status-footer">
+                        <p>Pending projects</p>
+                        <div class="status-percentage bg-danger-percentage">50%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card bg-light">
+                    <div class="status-header">
+                        <div class="status-icon text-primary">👥</div>
+                        <div>
+                            <p class="status-count">5</p>
+                            <p class="status-label">projects</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="status-footer">
+                        <p>Mentor projects</p>
+                        <div class="status-percentage bg-primary-percentage">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Section -->
+        <div class="project-section">
+            <h3 class="mb-4">Projects</h3>
+            <div class="project-card">
+                <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Project Image">
+                <div class="project-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, facilis!</p>
+                    <span class="account-project-status">
+                        <p>Project Status: Completed</p>
+                    </span>
+                    <p>Project Price: <del>$100</del> <strong>$80</strong></p>
+                </div>
+                <button class="btn btn-invoice">Download Invoice</button>
+            </div>
+            <div class="project-card">
+                <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Project Image">
+                <div class="project-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, facilis!</p>
+                    <span class="account-project-status">
+                        <p>Project Status: Completed</p>
+                    </span>
+                    <p>Project Price: <del>$100</del> <strong>$80</strong></p>
+                </div>
+                <button class="btn btn-invoice">Download Invoice</button>
+            </div>
+            <div class="project-card">
+                <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Project Image">
+                <div class="project-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, facilis!</p>
+                    <span class="account-project-status">
+                        <p>Project Status: Completed</p>
+                    </span>
+                    <p>Project Price: <del>$100</del> <strong>$80</strong></p>
+                </div>
+                <button class="btn btn-invoice">Download Invoice</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+{% endblock %}
+</html>

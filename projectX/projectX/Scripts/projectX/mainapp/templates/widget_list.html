@@ -1,0 +1,29 @@
+<!-- widgets/templates/widgets/widget_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Widgets</title>
+</head>
+<body>
+    <h1>Your Widgets</h1>
+    <ul>
+        {% for widget in widgets %}
+        <li>
+            <h3>{{ widget.title }}</h3>
+            {% if widget.elfsight_embed_code %}
+                <!-- Display the Elfsight widget if embed code exists -->
+                <div class="elfsight-widget">
+                    {{ widget.elfsight_embed_code|safe }}
+                </div>
+            {% else %}
+                <p>{{ widget.content }}</p>
+            {% endif %}
+            <a href="{% url 'edit_widget' widget.pk %}">Edit</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_widget' %}">Create New Widget</a>
+</body>
+</html>

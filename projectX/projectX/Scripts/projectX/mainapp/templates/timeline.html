@@ -1,0 +1,279 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Timeline Page</title>
+    
+    
+</head> -->
+{%block content%}
+
+    <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<body style="background: #f4f5f7;">
+
+    <div class="container py-4">
+        <div class="row">
+            <!-- Left Sidebar -->
+            <div class="col-md-3 left-sidebar">
+                <div class="timeline-widget profile-card text-center">
+                    <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Profile Picture">
+                    <h5 class="mt-3">John Sharma</h5>
+                    <p>UI/UX Developer at lawcrust</p>
+                    <div class="profile-stats d-flex justify-content-around">
+                        <p><strong>20</strong><br><span class="text-black">Profile Views</span></p>
+                        <p><strong>30</strong><br><span class="text-black">Impressions</span></p>
+                        <p><strong>30</strong><br><span class="text-black">Comments</span></p>
+                    </div>
+                </div>
+
+                <div class="timeline-widget">
+                    <h6 class="mb-3">Recently Searched Jobs</h6>
+                    <button
+                        class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-start w-100 mb-2 py-2">
+                        <i class="bi bi-display me-2"></i>
+                        <span>UI/UX Designer - Thane</span>
+                    </button>
+                    <button
+                        class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-start w-100 mb-2 py-2">
+                        <i class="bi bi-image me-2"></i>
+                        <span>Graphics Designer - Thane</span>
+                    </button>
+                    <button
+                        class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-start w-100 py-2">
+                        <i class="bi bi-laptop me-2"></i>
+                        <span>Frontend Designer - Thane</span>
+                    </button>
+                </div>
+
+
+                <div class="timeline-widget">
+                    <h6>Groups</h6>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://prestigecorporatesite.s3.ap-south-1.amazonaws.com/projectimage/e6b52d08-5755-442b-bc91-b265143b7592.webp"
+                                alt="Mumbai Design Group" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Mumbai Design Group</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://designerrs.com/wp-content/uploads/2023/09/Frame-427321316.svg"
+                                alt="UI/UX Academy Group" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>UI/UX Academy Group</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://images.shiksha.com/mediadata/images/articles/1727952706phpexYyzb.jpeg"
+                                alt="Graphics Design" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Graphics Design</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNYdgtGqG4D9mGjqKiglVzSkGNjSQKhwArQ&s"
+                                alt="Udemy" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Udemy</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-6 main-content">
+                <div class="search-bar-wrapper rounded-4 bg-white  mb-4  p-3">
+                    <!-- Top Section: Profile, Input, and Button -->
+                    <div class="search-bar d-flex align-items-center">
+                        <!-- Profile Picture -->
+                        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="User" class="rounded-circle me-2 user-img">
+
+                        <!-- Search Input -->
+                        <input type="text" class="form-control search-input" placeholder="What's on your mind?">
+
+                        <!-- Share Button -->
+                        <button class="btn btn-primary ms-3  border">Share Post</button>
+                    </div>
+
+                    <!-- Bottom Section: Quick Actions -->
+                    <div class="quick-actions d-flex justify-content-around align-items-center mt-3">
+                        <div class="action-item text-center">
+                            <i class="bi bi-image text-primary"></i>
+                            <p class="small">Images</p>
+                        </div>
+                        <div class="action-item text-center">
+                            <i class="bi bi-paperclip text-success"></i>
+                            <p class="small">Attachments</p>
+                        </div>
+                        <div class="action-item text-center">
+                            <i class="bi bi-camera-video text-danger"></i>
+                            <p class="small">Videos</p>
+                        </div>
+                        <div class="action-item text-center">
+                            <i class="bi bi-hash text-warning"></i>
+                            <p class="small">Hashtags</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="post-card">
+                    <div class="post-header d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="User" class="profile-img">
+                        <div class="ms-3">
+                            <h6 class="mb-0">John Sharma</h6>
+                            <p class="text-muted mb-0">UI/UX Designer</p>
+                        </div>
+                    </div>
+                    <div class="post-content mt-3">
+                        <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Post Image" class="w-100">
+                    </div>
+                    <div class="interaction-icons d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <i class="ri-heart-line me-3"></i>
+                            <i class="ri-chat-3-line me-3"></i>
+                            <i class="ri-share-forward-line"></i>
+                        </div>
+                        <span class="text-muted d-flex align-items-center">
+                            <i class="bi bi-eye me-2"></i>15k views
+                        </span>
+                    </div>
+                </div>
+                
+
+
+                <div class="post-card">
+                    <div class="post-header d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="User" class="profile-img">
+                        <div class="ms-3">
+                            <h6 class="mb-0">John Sharma</h6>
+                            <p class="text-muted mb-0">UI/UX Designer</p>
+                        </div>
+                    </div>
+                    <div class="post-content mt-3">
+                        <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Post Image" class="w-100">
+                    </div>
+                    <div class="interaction-icons d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <i class="ri-heart-line me-3"></i>
+                            <i class="ri-chat-3-line me-3"></i>
+                            <i class="ri-share-forward-line"></i>
+                        </div>
+                        <span class="text-muted d-flex align-items-center">
+                            <i class="bi bi-eye me-2"></i>15k views
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-md-3 right-sidebar">
+                <div class="timeline-widget">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6>Messages</h6>
+                        <div>
+                            <i class="ri-edit-line me-2" style="cursor: pointer;" title="Edit"></i>
+                            <i class="ri-message-2-line" style="cursor: pointer;" title="New Message"></i>
+                        </div>
+                    </div>
+                    <div class="position-relative mb-3">
+                        <input type="text" class="form-control rounded-4 ps-5" placeholder="Search messages"
+                            aria-label="Search messages">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZ7-RvuHkigDuiCePGwq4m4UY-rqVV9s4cQ&s"
+                                alt="Joy Iogo - UI/UX Designer" class="group-logo">
+                            <span class="ms-2">Joy Iogo - UI/UX Designer</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtiOS4bu993VNbG4v2lYnjv3fNA1ops7KvoQ&s"
+                                alt="Levi - Business Consultant" class="group-logo">
+                            <span class="ms-2">Levi - Business Consultant</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRU3ycR2KAcoNgkaVSws3UP7Qhhr5aBuDzw&s"
+                                alt="Finn - UI/UX Designer" class="group-logo">
+                            <span class="ms-2">Finn - UI/UX Designer</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYGms-R_qMUpJinj8QUyWbIYsvNWVJ1E30cw&s"
+                                alt="Rajani Ukey - Fashion Designer" class="group-logo">
+                            <span class="ms-2">Rajani Ukey - Fashion Designer</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTevJnBO6sElaLQu0K8moM7q1hRdf47-Z97A&s"
+                                alt="Kaveri Sharma - Doctor" class="group-logo">
+                            <span class="ms-2">Kaveri Sharma - Doctor</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="timeline-widget">
+                    <h6>Trending Jobs</h6>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNyJgT2YEDHjyON8Ym_nMxhr922r10PQYaXg&s"
+                                alt="UX Designer Academy" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>UX Designer Academy</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://img.freepik.com/free-vector/broccoli-vegetable-cartoon-vector-icon-illustration-food-nature-icon-concept-isolated-premium-flat_138676-5150.jpg"
+                                alt="BROCLE" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>BROCLE</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTTIPicTeInYLkRJTekpLOBpB6gCPhz1yTA&s"
+                                alt="Digital Marketing Classes" class="group-logo rounded-circle me-3" width="40"
+                                height="40">
+                            <span>Digital Marketing Classes</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D560BAQEf_NHzN2yVQg/company-logo_200_200/company-logo_200_200/0/1723593046388/udemy_logo?e=2147483647&v=beta&t=_tl_e0tunbg9SkCl3nXHQEaQu4FlCGi4UU2chO9yBRs"
+                                alt="Udemy" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Udemy</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-widget">
+                    <h6>People Following You</h6>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Joy Iogo" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Joy Iogo</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <img src="https://images.pexels.com/photos/1844547/pexels-photo-1844547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Rajani Ukey" class="group-logo rounded-circle me-3" width="40" height="40">
+                            <span>Rajani Ukey</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+{%endblock%}
+
+</html>

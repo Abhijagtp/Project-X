@@ -1,0 +1,319 @@
+/* Dashboard styling ================================================================================================================= */
+
+/* General Body Styling */
+body {
+  background-color: #f3f4f6; /* Matching the background from the dashboard page */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #4a4e69; /* Matching the navbar brand color */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 56px; /* Adjust for the navbar height */
+  left: 0;
+  height: calc(100vh - 56px);
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar .nav-link {
+  color: #4a4e69;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin: 5px 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e7f0ff;
+  color: #1d3557;
+}
+
+.sidebar .nav-link i {
+  margin-right: 8px;
+}
+
+.sidebar.collapsed .nav-link span {
+  display: none;
+}
+
+.sidebar.collapsed .nav-link {
+  text-align: center;
+}
+
+.sidebar .dropdown-toggle::after {
+  float: right;
+}
+
+.sidebar.collapsed #socialMenu {
+  display: none !important;
+}
+
+.sidebar.collapsed .dropdown-toggle::after {
+  display: none !important;
+}
+
+.sidebar.collapsed .logout {
+  display: none;
+}
+
+.sidebar .logout a {
+  font-size: 14px;
+}
+
+/* Toggle Button Styling */
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  background-color: #1d3557; /* Matching the button color from the dashboard */
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #457b9d;
+}
+
+.sidebar.collapsed .toggle-button {
+  right: -20px;
+}
+
+/* Content Styling */
+.content {
+  margin-top: 56px; /* Adjust for the navbar height */
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.content.collapsed {
+  margin-left: 80px;
+}
+
+.content h2 {
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.content p {
+  color: #6c757d;
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-250px);
+    /* Initially hidden off-screen */
+    width: 250px;
+    z-index: 1000;
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(0);
+    /* Fully visible when expanded */
+    width: 250px;
+  }
+  .sidebar.collapsed .nav-link span {
+    display: block;
+  }
+
+  .sidebar.collapsed .nav-link {
+    text-align: center;
+  }
+  /* Remove search input in mobile view */
+  .navbar .form-control {
+    display: none;
+  }
+
+  /* Show only the search icon on mobile */
+  .navbar .d-lg-none {
+    display: block;
+  }
+
+  /* Mobile view for content */
+  .content {
+    margin-left: 0;
+    /* No margin on mobile */
+  }
+
+  .content.collapsed {
+    margin-left: 0;
+    /* No margin when collapsed on mobile */
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .navbar .d-none {
+    display: none;
+  }
+
+  .navbar .d-lg-block {
+    display: block;
+  }
+}
+
+/* Course main page styling ========================================================================================== */
+/* General */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section .highlight {
+  color: #ffc107;
+}
+
+/* Popular Courses */
+.course-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Instructor Section */
+.instructor-section {
+  background: linear-gradient(90deg, #17a2b8, #0d6efd);
+}
+
+/* Testimonials */
+.testimonial {
+  background: #f8f9fa;
+  border-left: 5px solid #0d6efd;
+}
+
+/* Hero Section */
+.hero-image {
+  background-image: url(../images/coursehero.png);
+  background-size: cover;
+  height: 500px; /* Adjust height as needed */
+  color: white;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fddb9242;
+}
+
+.hero-image h1,
+.hero-image p,
+.hero-image .d-flex {
+  position: relative;
+  z-index: 2; /* Ensure content is above the background */
+}
+
+.course-hero-card {
+  color: black;
+  background: linear-gradient(200deg, #fddb92, #d1fdff);
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
+  border: 1px solid #7b7c82;
+}
+
+.course-hero-card i {
+  color: #001f3e; /* Icon color */
+}
+
+.course-hero-card h3 {
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+.course-hero-card p {
+  font-size: 1rem; /* Adjust font size as needed */
+  color: black;
+}
+
+/* course categories / grid styling===================================================================================== */
+.course-card {
+  transition: transform 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.rating-stars {
+  color: #ffd700;
+}
+/* CourseContent css ================================================================================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.course-header {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+}
+
+.rating-stars {
+  color: #ffc107;
+}
+
+.course-sidebar {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.course-video iframe {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 0;
+}
+
+.popular-tags a {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.section-spacing {
+  margin-bottom: 30px;
+}
+
+/* Work landing page styling ================================================= */

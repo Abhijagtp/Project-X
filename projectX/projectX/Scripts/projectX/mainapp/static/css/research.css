@@ -1,0 +1,25 @@
+
+.card.selected {
+    border: 2px solid #007bff;
+    background-color: #f0f8ff;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.section-hidden {
+    display: none;
+}
+
+.section-visible {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+}

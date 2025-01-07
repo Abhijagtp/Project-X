@@ -1,0 +1,235 @@
+
+    <style>
+        /* Container for cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .whitepaper-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            height: 450px; /* Fixed height */
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .whitepaper-header {
+            padding: 15px;
+            color: rgb(102, 95, 95);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .whitepaper-header h5 {
+            margin: 0;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .whitepaper-header h6 {
+            margin: 10px 0 0;
+            font-size: 1.5rem;
+            color: blue;
+            font-weight: 700;
+        }
+
+        .whitepaper-body {
+            margin-top: 10px;
+            padding: 15px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .whitepaper-body p {
+            font-size: 1rem;
+            color: #495057;
+        }
+
+        .whitepaper-body .views {
+            font-size: 0.8rem;
+            color: gray; /* Gray color for views */
+        }
+
+        .whitepaper-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 15px;
+            /* background-color: #f8f9fa; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background: #000; */
+        }
+
+        /* Circle style for Edit and Share icons */
+        .footer-left i {
+            background-color: #000000B2; /* Gray background */
+            color: white;
+            border-radius:20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .footer-left i:hover {
+            background-color: #5a6268; /* Darker gray on hover */
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-right i {
+            /* background-color: #000000B2; 
+            color: white; */
+            border-radius:20px;
+            /* padding: 10px 20px */
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        .footer-right span {
+            margin-left: 10px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer-right i:hover {
+            background-color: #5a6268; /* Darker gray on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                justify-content: center;
+            }
+
+            .whitepaper-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whitepaper-header h5 {
+                font-size: 1rem;
+            }
+
+            .whitepaper-header h6 {
+                font-size: 1rem;
+            }
+
+            .whitepaper-body p {
+                font-size: 0.9rem;
+            }
+
+            .whitepaper-footer {
+                padding: 8px 10px;
+            }
+
+            .whitepaper-footer i {
+                font-size: 0.9rem;
+            }
+
+            .footer-right span {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+
+
+<div class="row">
+    <!-- First Whitepaper Card -->
+    <div class="col-lg-6 col-md-6 col-sm-12 mb-4 mt-4">
+        <div class="whitepaper-card">
+            <div class="whitepaper-header">
+                <h5>December 2024</h5>
+                <h6>Sleek app that helps users explore purchasing power</h6>
+            </div>
+            <div class="whitepaper-body">
+                <p>
+                    Introducing a sleek concept for an app that helps users explore their purchasing power and track their financial activity in one place!<br>
+                </p>
+                <p class="views">
+                    Compute | Security, Identity & Compliance | Financial Services
+                </p>
+            </div>
+            <div class="whitepaper-footer">
+                <div class="footer-left">
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-share"></i>
+                </div>
+                <div class="footer-right">
+                    <i class="ri-chat-1-line"></i>
+                    <span class="comment-count text-black">271</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second Whitepaper Card -->
+    <div class="col-lg-6 col-md-6 col-sm-12 mb-4 mt-4">
+        <div class="whitepaper-card">
+            <div class="whitepaper-header">
+                <h5>December 2024</h5>
+                <h6>Sleek app that helps users explore purchasing power</h6>
+            </div>
+            <div class="whitepaper-body">
+                <p>
+                    Introducing a sleek concept for an app that helps users explore their purchasing power and track their financial activity in one place!<br>
+                </p>
+                <p class="views">
+                    Compute | Security, Identity & Compliance | Financial Services
+                </p>
+            </div>
+            <div class="whitepaper-footer">
+                <div class="footer-left">
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-share"></i>
+                </div>
+                <div class="footer-right">
+                    <i class="ri-chat-1-line"></i>
+                    <span class="comment-count text-black">271</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Third Whitepaper Card -->
+    <div class="col-lg-6 col-md-6 col-sm-12 mb-4 mt-4">
+        <div class="whitepaper-card">
+            <div class="whitepaper-header">
+                <p>December 2024</p>
+                <h6>Sleek app that helps users explore purchasing power</h6>
+                <div class="border"></div>
+            </div>
+            <div class="whitepaper-body">
+                <p class="body-main">
+                    Introducing a sleek concept for an app that helps users explore their purchasing power and track
+                    their financial activity in one place!<br>
+                </p>
+                <p class="views">
+                    Compute | Security, Identity & Compliance | Financial Services
+                </p>
+            </div>
+            <div class="whitepaper-footer">
+                <div class="footer-left">
+                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-share"></i>
+                </div>
+                <div class="footer-right">
+                    <i class="ri-chat-1-line"></i>
+                    <span class="comment-count text-black">271</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

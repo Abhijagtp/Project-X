@@ -1,0 +1,193 @@
+<style>
+  body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .skill-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 10px;
+    flex: 0 0 calc(50% - 20px); /* Two cards per row by default */
+  }
+
+  .skill-card .icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .skill-card .edit-icon {
+    position: absolute;
+    top: 15px;
+    left: 340px;
+    background-color: #242424;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 25px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .progress-bar-custom {
+    height: 100%;
+    background: linear-gradient(to right, #6224E4, #09E4F8);
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .progress-bar-custom:hover::after {
+    content: attr(data-percentage) '%';
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    padding: 2px 6px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .progress-bg {
+    background-color: #e9ecef;
+    height: 12px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .skill-card {
+      flex: 0 0 100%; /* 1 card per row on smaller screens */
+      margin-bottom: 20px;
+    }
+
+    .edit-icon {
+      left: 250px; /* Adjust position for smaller screens */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .skill-card .icon {
+      font-size: 16px; /* Smaller icons on very small screens */
+      height: 40px;
+      width: 40px;
+    }
+
+    .skill-card .edit-icon {
+      left: 200px; /* Further adjust for very small screens */
+    }
+  }
+</style>
+
+<div class="container mt-5">
+  <div class="skills-container">
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #5a4fdb;">
+        <i class="bi bi-cup"></i>
+      </div>
+      <h5 class="mb-1">JAVA</h5>
+      <p class="text-muted mb-5">DY Patil University</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 70%;" data-percentage="70"></div>
+      </div>
+    </div>
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #f48fb1;">
+        <i class="bi bi-python"></i>
+      </div>
+      <h5 class="mb-1">Python</h5>
+      <p class="text-muted mb-5">Amazon</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 60%;" data-percentage="60"></div>
+      </div>
+    </div>
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #29b6f6;">
+        <i class="bi bi-filetype-html"></i>
+      </div>
+      <h5 class="mb-1">HTML5</h5>
+      <p class="text-muted mb-5">Amazon</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 75%;" data-percentage="75"></div>
+      </div>
+    </div>
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #64dd17;">
+        <i class="bi bi-cloud"></i>
+      </div>
+      <h5 class="mb-1">Amazon Web Services</h5>
+      <p class="text-muted mb-5">Amazon</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 85%;" data-percentage="85"></div>
+      </div>
+    </div>
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #ff5252;">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h5 class="mb-1">C++</h5>
+      <p class="text-muted mb-5">SIES</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 50%;" data-percentage="50"></div>
+      </div>
+    </div>
+    <!-- Skill Card -->
+    <div class="skill-card">
+      <div class="edit-icon">
+        <i class="bi bi-pencil"></i>
+      </div>
+      <div class="icon" style="background-color: #ffa000;">
+        <i class="bi bi-android"></i>
+      </div>
+      <h5 class="mb-1">Android Studio</h5>
+      <p class="text-muted mb-5">Amazon</p>
+      <div class="progress-bg">
+        <div class="progress-bar-custom" style="width: 40%;" data-percentage="40"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

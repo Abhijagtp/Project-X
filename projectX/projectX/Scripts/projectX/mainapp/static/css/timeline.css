@@ -1,0 +1,243 @@
+/* Sidebar Widgets */
+.timeline-widget {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-widget ul li img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.group-logo {
+  width: 30px;
+  /* Adjust the size of the logo */
+  height: auto;
+  /* Keep aspect ratio */
+  vertical-align: middle;
+  /* Align the logo with the text */
+}
+
+.timeline-widget ul {
+  padding-left: 0;
+  /* Remove default padding from the list */
+}
+
+.timeline-widget ul li {
+  list-style: none;
+  /* Remove the bullet points */
+  display: flex;
+  /* Align logo and text horizontally */
+  align-items: center;
+  /* Vertically center the text and logo */
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-stats p {
+  font-size: 14px;
+  color: #1739b4;
+  /* border-right: 1px solid black; */
+  padding: 0 2px;
+}
+
+/* Post Card */
+.post-card {
+  border: 1px solid #ddd;
+  /* Add a border around the card */
+  border-radius: 8px;
+  /* Optional: rounded corners */
+  padding: 16px;
+  margin-bottom: 20px;
+  /* Add spacing between posts */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 50px;
+  /* Profile image size */
+  height: 50px;
+  border-radius: 50%;
+  /* Make it circular */
+  object-fit: cover;
+  /* Ensure proper image cropping */
+}
+
+.post-content img {
+  border-radius: 8px;
+  /* Optional: rounded corners for post images */
+  max-width: 100%;
+  /* Ensure responsiveness */
+  height: auto;
+}
+
+.interaction-icons i {
+  font-size: 20px;
+  /* Adjust icon size */
+  cursor: pointer;
+  /* Pointer cursor for icons */
+}
+
+.interaction-icons span {
+  font-size: 14px;
+  /* Adjust text size */
+  font-weight: 500;
+  color: #6c757d;
+  /* Text color for views */
+}
+
+.interaction-icons {
+  border-top: 1px solid #ddd;
+  /* Add a border at the top of the interaction section */
+  padding-top: 8px;
+}
+
+/* Search Bar */
+.search-bar {
+  /* background: #fff; */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.search-bar img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.search-bar input {
+  border: 1px solid rgba(0, 0, 0, 0.153);
+  border-radius: 20px;
+  width: 345px;
+}
+.search-bar-wrapper {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.group-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.timeline-widget ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-widget ul li {
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.timeline-widget ul li:last-child {
+  border-bottom: none;
+}
+
+.input-group input {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-group button {
+  border-radius: 0 4px 4px 0;
+}
+
+.ri-edit-line,
+.ri-message-2-line {
+  font-size: 18px;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.ri-edit-line:hover,
+.ri-message-2-line:hover {
+  color: #007bff;
+}
+
+.interaction-icons i {
+  font-size: 1.2rem;
+  /* Adjust icon size */
+  color: #6c757d;
+  /* Muted color for icons */
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  /* Slightly smaller text for views */
+}
+
+.text-muted i {
+  font-size: 1.1rem;
+  /* Adjust eye icon size */
+  color: #6c757d;
+  /* Match with muted text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-bar-wrapper {
+    padding: 15px;
+  }
+  .user-img {
+    width: 40px;
+    height: 40px;
+  }
+  .search-input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .user-img {
+    width: 35px;
+    height: 35px;
+  }
+  .search-bar input {
+    border: 1px solid rgba(0, 0, 0, 0.153);
+    border-radius: 20px;
+    width: 300px;
+  }
+  button {
+    width: 80%;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

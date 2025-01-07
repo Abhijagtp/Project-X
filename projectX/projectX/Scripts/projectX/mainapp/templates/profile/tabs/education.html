@@ -1,0 +1,144 @@
+<style>
+    .education-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-header {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .education-header img {
+        height: 60px;
+        width: 60px;
+        margin-right: 15px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 5px;
+    }
+
+    .education-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .education-company {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .education-duration {
+        font-size: 14px;
+        color: #777;
+    }
+
+    .edit-icon {
+        position: absolute;
+        top: 15px;
+        left: 850px;
+        background-color: #242424;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        padding: 10px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .add-experience-btn {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 15px;
+    }
+
+    .add-experience-btn button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .education-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .education-header img {
+            margin-bottom: 10px;
+        }
+
+        .edit-icon {
+            top: 30px;
+            left: 200px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .education-card {
+            padding: 15px;
+        }
+
+        .education-title {
+            font-size: 16px;
+        }
+
+        .education-company {
+            font-size: 14px;
+        }
+
+        .education-duration {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<div class="container mt-5">
+    <!-- <div class="add-experience-btn">
+        <button>+ Add Education</button>
+    </div> -->
+    <div class="education-card">
+        <div class="edit-icon">
+            <i class="bi bi-pencil"></i>
+        </div>
+        <div class="education-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmw1XUipso33z-hXs67B1wSkSFve2M_zKLjg&s" alt="DY Patil University Logo">
+            <div>
+                <div class="education-title">DY Patil University</div>
+                <div class="education-company">Masters of Engineering, Data Science</div>
+                <div class="education-duration">Jun 2019 - July 2021</div>
+                <br>
+                <p>Grade: 8.5/10</p>
+            </div>
+        </div>
+    </div>
+    <div class="education-card">
+        <div class="edit-icon">
+            <i class="bi bi-pencil"></i>
+        </div>
+        <div class="education-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-c0v-LFgr6vKmffTBzzJ3yT6_A5VkfPHn2g&s" alt="SIES Logo">
+            <div>
+                <div class="education-title">SIES</div>
+                <div class="education-company">Bachelors of Engineering, Computer Science</div>
+                <div class="education-duration mb-4">Jun 2015 - July 2019</div>
+                <p>Grade: 8.7/10</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

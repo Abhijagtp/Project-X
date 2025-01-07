@@ -1,0 +1,202 @@
+
+{% extends 'dashboard.html' %}
+{% load static %}
+
+<body>
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'chatroom.css' %}">
+
+    
+    
+    <div class="container  row g-4">
+        <div class="chat-container chat-height card post-card ">
+            <div class="row h-100 g-0">
+                <!-- Left Sidebar -->
+               <!-- changes  -->
+               <div class="col-12 col-md-4 col-lg-3 border-end">
+                    <div class="p-4 border-bottom">
+                       
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="icon-circle bg-info text-white">
+                                <i class="bi bi-chat-fill"></i>
+                            </div>
+                            <div class="icon-circle bg-light">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="icon-circle bg-light">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="icon-circle bg-light">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-medium">Chats</span>
+                            <span class="badge bg-info rounded-pill">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overflow-auto chat-list-height scrollbar-hide" id="chat-list">
+                        <!-- Chat list items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Main Chat Area -->
+                <div class="col-12 col-md-8 col-lg-6 d-flex flex-column">
+                    <div class="p-4 border-bottom d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" class="rounded-circle me-2" width="40" height="40">
+                            </div>
+                            <div>
+                                <h2 class="h6 fw-semibold mb-0">Current Chat</h2>
+                                <p class="text-muted small mb-0">Last seen 3 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4">
+                            <i class="bi bi-telephone"></i>
+                            <i class="bi bi-camera-video"></i>
+                            <i class="bi bi-three-dots"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex-grow-1 p-4 overflow-auto" id="messages-container">
+                        <!-- Messages will be inserted here by JavaScript -->
+                    </div>
+
+                    <div class="p-4 border-top">
+                        <div class="d-flex gap-2 align-items-center">
+                            <button class="btn btn-light"><i class="bi bi-paperclip"></i></button>
+                            <input type="text" id="message-input" class="form-control" placeholder="Type a message here...">
+                            <button class="btn btn-light"><i class="bi bi-emoji-smile"></i></button>
+                            <button class="btn btn-light"><i class="bi bi-mic"></i></button>
+                            <button class="btn btn-info text-white" onclick="sendMessage()">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="d-none d-lg-block col-lg-3 border-start p-4">
+                    <div class="mb-4">
+                        <h3 class="h6 fw-semibold mb-3">Notifications</h3>
+                        <div id="notifications" class="d-flex flex-column gap-3">
+                            <!-- Notifications will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="h6 fw-semibold mb-3">Suggestions</h3>
+                        <div id="suggestions" class="d-flex flex-column gap-3">
+                            <!-- Suggestions will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sample data and JavaScript functionality remains the same as in the previous version
+        const chatList = [
+            { name: "Alex Smith", message: "Hey, how are you?", time: "12:30 PM", unread: true },
+            { name: "Sarah Johnson", message: "Meeting at 3?", time: "11:45 AM", unread: false },
+            { name: "Mike Wilson", message: "Thanks for the update!", time: "10:20 AM", unread: true },
+            { name: "Emily Brown", message: "See you tomorrow", time: "09:15 AM", unread: false },
+        ];
+
+        const notifications = [
+            { user: "John", action: "mentioned you in Team chat", time: "2m ago" },
+            { user: "Lisa", action: "added you to Project X", time: "5m ago" },
+            { user: "Mike", action: "sent you a file", time: "15m ago" },
+        ];
+
+        const suggestions = [
+            { name: "David Miller", mutuals: "12 mutuals" },
+            { name: "Emma Watson", mutuals: "8 mutuals" },
+            { name: "Chris Evans", mutuals: "15 mutuals" },
+        ];
+
+        // Populate chat list
+        document.getElementById('chat-list').innerHTML = chatList.map(chat => `
+            <div class="p-4 border-bottom hover-bg-light cursor-pointer">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="avatar"></div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="h6 mb-0">${chat.name}</h3>
+                            <span class="text-muted small">${chat.time}</span>
+                        </div>
+                        <p class="text-muted small mb-0 text-truncate">${chat.message}</p>
+                    </div>
+                    ${chat.unread ? '<div class="unread-dot"></div>' : ''}
+                </div>
+            </div>
+        `).join('');
+
+        // Populate notifications
+        document.getElementById('notifications').innerHTML = notifications.map(notif => `
+            <div class="d-flex align-items-center gap-3">
+                <div class="avatar small-avatar"></div>
+                <div>
+                    <p class="mb-0 small"><strong>@${notif.user}</strong> ${notif.action}</p>
+                    <span class="text-muted smaller">${notif.time}</span>
+                </div>
+            </div>
+        `).join('');
+
+        // Populate suggestions
+        document.getElementById('suggestions').innerHTML = suggestions.map(sugg => `
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="avatar small-avatar"></div>
+                    <div>
+                        <p class="mb-0 small fw-semibold">${sugg.name}</p>
+                        <p class="mb-0 text-muted smaller">${sugg.mutuals}</p>
+                    </div>
+                </div>
+                <button class="btn btn-link text-info p-0 small fw-semibold">Add</button>
+            </div>
+        `).join('');
+
+        // Message handling
+        let messages = [];
+
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                messages.push({ text: message, sent: true });
+                input.value = '';
+                updateMessages();
+            }
+        }
+
+        function updateMessages() {
+            document.getElementById('messages-container').innerHTML = messages.map(msg => `
+                <div class="mb-3">
+                    <div class="message-bubble ${msg.sent ? 'message-sent' : 'message-received'}">
+                        ${msg.text}
+                    </div>
+                </div>
+            `).join('');
+            
+            const container = document.getElementById('messages-container');
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // Enter key to send message
+        document.getElementById('message-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+   
+    {% endblock %}
+</body>
+</html>

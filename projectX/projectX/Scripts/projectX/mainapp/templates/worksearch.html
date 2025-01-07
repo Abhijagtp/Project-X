@@ -1,0 +1,144 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Job Listings</title>
+
+
+    <link rel="stylesheet" href="{% static 'css/worksearch.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   
+</head>
+<body>
+    {% block content %}
+    
+    <link rel="stylesheet" href="{% static 'css/worksearch.css' %}">
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Freelance Job Listings</h1>
+        <p>Find your next freelance opportunity </p>
+        <a href="#" class="btn" id="getStartedBtn">Get Started</a>
+    </header>
+   
+    <div class="container search-bar" id="searchBar">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-12 mb-3">
+                <input type="text" class="form-control" placeholder="Search keywords">
+            </div>
+            <div class="col-md-3 col-12 mb-3">
+                <select class="form-select">
+                    <option>Select category</option>
+                </select>
+            </div>
+            <div class="col-md-2 col-12 mb-3">
+                <button class="btn w-100">Search Now</button>
+            </div>
+        </div>
+    </div>
+     <!-- Job Listings -->
+     <div class="container">
+        <h4>18 search result(s) found</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="job-card">
+                    <h5>Website Design and Front-End Development</h5>
+                    <p><strong>Fixed price project -</strong> <span class="price">$1,200 - $1,400</span></p>
+                    <p>We are seeking a talented Website Designer and Front-End Developer to join our team. In this role, you will be responsible for creating visually appealing and user-friendly websites that meet our clients’ needs. You will work closely with our design and development teams to ensure the final product is both functional...</p>
+                    <div class="job-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Apr 30, 2024</span>
+                        <span><i class="fas fa-map-marker-alt remote"></i> Remote</span>
+                        <span><i class="fas fa-user-tie level"></i> Senior Level</span>
+                        <span><i class="fas fa-users freelancers"></i> 2 Freelancers</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-tags"></i> App Design, Content Writing, Illustration, +5 more</span>
+                    </div>
+                    <a href="{% url 'projectpage' %}" class="btn btn-outline-primary btn-sm mt-2"><i class="fas fa-eye"></i> View Job</a>
+                    <a href="#" class="btn btn-primary btn-sm mt-2 ms-2"><i class="fas fa-check-circle"></i> Apply</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="job-card">
+                    <h5>Website Design and Front-End Development</h5>
+                    <p><strong>Fixed price project -</strong> <span class="price">$1,200 - $1,400</span></p>
+                    <p>We are seeking a talented Website Designer and Front-End Developer to join our team. In this role, you will be responsible for creating visually appealing and user-friendly websites that meet our clients’ needs. You will work closely with our design and development teams to ensure the final product is both functional...</p>
+                    <div class="job-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Apr 30, 2024</span>
+                        <span><i class="fas fa-map-marker-alt remote"></i> Remote</span>
+                        <span><i class="fas fa-user-tie level"></i> Senior Level</span>
+                        <span><i class="fas fa-users freelancers"></i> 2 Freelancers</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-tags"></i> App Design, Content Writing, Illustration, +5 more</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2"><i class="fas fa-eye"></i> View Job</a>
+                    <a href="#" class="btn btn-primary btn-sm mt-2 ms-2"><i class="fas fa-check-circle"></i> Apply</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="job-card">
+                    <h5>Website Design and Front-End Development</h5>
+                    <p><strong>Fixed price project -</strong> <span class="price">$1,200 - $1,400</span></p>
+                    <p>We are seeking a talented Website Designer and Front-End Developer to join our team. In this role, you will be responsible for creating visually appealing and user-friendly websites that meet our clients’ needs. You will work closely with our design and development teams to ensure the final product is both functional...</p>
+                    <div class="job-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Apr 30, 2024</span>
+                        <span><i class="fas fa-map-marker-alt remote"></i> Remote</span>
+                        <span><i class="fas fa-user-tie level"></i> Senior Level</span>
+                        <span><i class="fas fa-users freelancers"></i> 2 Freelancers</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-tags"></i> App Design, Content Writing, Illustration, +5 more</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2"><i class="fas fa-eye"></i> View Job</a>
+                    <a href="#" class="btn btn-primary btn-sm mt-2 ms-2"><i class="fas fa-check-circle"></i> Apply</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="job-card">
+                    <h5>Website Design and Front-End Development</h5>
+                    <p><strong>Fixed price project -</strong> <span class="price">$1,200 - $1,400</span></p>
+                    <p>We are seeking a talented Website Designer and Front-End Developer to join our team. In this role, you will be responsible for creating visually appealing and user-friendly websites that meet our clients’ needs. You will work closely with our design and development teams to ensure the final product is both functional...</p>
+                    <div class="job-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Apr 30, 2024</span>
+                        <span><i class="fas fa-map-marker-alt remote"></i> Remote</span>
+                        <span><i class="fas fa-user-tie level"></i> Senior Level</span>
+                        <span><i class="fas fa-users freelancers"></i> 2 Freelancers</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-tags"></i> App Design, Content Writing, Illustration, +5 more</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2"><i class="fas fa-eye"></i> View Job</a>
+                    <a href="#" class="btn btn-primary btn-sm mt-2 ms-2"><i class="fas fa-check-circle"></i> Apply</a>
+                </div>
+            </div>
+            <!-- Repeat for other job listings -->
+        </div>
+    </div>
+
+  
+
+    <script>
+        // JavaScript for highlighting the search bar when the "Get Started" button is clicked
+        document.getElementById('getStartedBtn').addEventListener('click', function() {
+            var searchBar = document.getElementById('searchBar');
+            searchBar.classList.add('highlight'); // Add the highlight class to the search bar
+
+            // Optionally, remove the highlight after the animation duration (1s in this case)
+            setTimeout(function() {
+                searchBar.classList.remove('highlight');
+            }, 1000); // 1 second
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+{% endblock %}
+</html>

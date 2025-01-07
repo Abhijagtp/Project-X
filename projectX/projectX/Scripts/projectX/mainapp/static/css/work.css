@@ -1,0 +1,309 @@
+body {
+    font-family: "Roboto", sans-serif;
+    /* background: #000; */
+}
+
+
+header {
+    /* background-color: #f8f9fa; */
+    padding: 60px 0;
+    text-align: center;
+    /* border-bottom: 2px solid #ddd;
+    margin-bottom: 50px; */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    /* background: #000; */
+    margin: 0px;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0px 100px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    /* Default background */
+}
+
+/* .hero-section .container {
+    background-color: #a23c18;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+} */
+
+.hero-section .container::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 50vh; */
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    max-width: 50%;
+}
+
+/* .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+} */
+
+.search-bar .form-control {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.search-bar .btn {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #deeeffb4;
+}
+
+.search-bar .btn i {
+    margin-right: 8px;
+    /* Space between icon and text */
+}
+
+.search-bar .btn:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .form-control:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+    outline: none;
+}
+
+.marquee-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    display: flex;
+    animation: slide 10s linear infinite;
+    gap: 100px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move to the left, off-screen */
+    }
+}
+
+
+.talent-section .card {
+    border: none;
+    text-align: center;
+}
+
+.talent-section .card img {
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-body p {
+    font-size: 1rem;
+}
+
+.card-body .btn {
+    width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        padding: 0px 0px;
+        /* Add padding for smaller screens */
+    }
+
+    .hero-section .container {
+
+        padding: 20px 20px;
+
+        /* Default background */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        /* Adjust height for content wrapping */
+        padding: 15px 0;
+        /* Add spacing between content sections */
+    }
+
+    .hero-image {
+        order: -1;
+        /* Move the image to the top */
+        max-width: 100%;
+        /* Allow the image to span the container width */
+        margin-bottom: 20px;
+        /* Add space below the image */
+        padding: 0 10px;
+        /* Add horizontal padding for better spacing */
+    }
+
+    .hero-image img {
+        width: 100%;
+        /* Ensure the image is responsive */
+        max-width: 300px;
+        /* Limit the maximum size for better layout */
+        margin: 0 auto;
+        /* Center align the image */
+    }
+
+    .hero-text {
+        max-width: 100%;
+        /* Allow text to take full width */
+        text-align: center;
+        /* Center-align text for better presentation */
+        padding: 10px 15px;
+        /* Add padding for spacing */
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+        /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+        /* Reduce margin for better spacing */
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        /* Adjust paragraph font size */
+        margin-bottom: 15px;
+        /* Add spacing after the paragraph */
+    }
+
+    .search-bar {
+        flex-direction: column;
+        /* Stack input and button vertically */
+        align-items: stretch;
+        /* Ensure full-width alignment */
+        gap: 10px;
+        /* Add spacing between input and button */
+        padding: 10px 0;
+        /* Add vertical padding */
+    }
+
+    .search-bar .form-control,
+    .search-bar .btn {
+        width: 100%;
+        /* Full width for input and button */
+        margin: 0;
+        /* Reset margins for better alignment */
+        padding: 10px 15px;
+        /* Adjust padding for comfortable input */
+    }
+
+    .search-bar .btn {
+        font-size: 16px;
+        /* Adjust button font size */
+    }
+}

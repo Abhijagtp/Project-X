@@ -1,0 +1,195 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Setup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head> -->
+
+
+<body class="bg-light">
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/research.css' %}">
+   
+
+    <!-- First Section: Campaign Objective -->
+    <div class="container py-5" id="campaign-objective-section">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">What's your campaign objective?</h1>
+            <p class="text-muted">Select an objective to tailor your experience to the goals and settings that will work
+                best for your campaign.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Objective Cards -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card" data-objective="Sales">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🏷</div>
+                        <h5 class="card-title fw-bold">Sales</h5>
+                        <p class="card-text text-muted">Drive sales online, in app, by phone, or in store.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card" data-objective="Leads">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">👥</div>
+                        <h5 class="card-title fw-bold">Leads</h5>
+                        <p class="card-text text-muted">Get leads and other conversions by encouraging customers to take
+                            action.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card" data-objective="Website Traffic">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🔗</div>
+                        <h5 class="card-title fw-bold">Website Traffic</h5>
+                        <p class="card-text text-muted">Get the right people to visit your website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card" data-objective="App Promotion">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">📱</div>
+                        <h5 class="card-title fw-bold">App Promotion</h5>
+                        <p class="card-text text-muted">Increase installs and engagement for your app.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card"
+                    data-objective="Product and Brand Consideration">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🛒</div>
+                        <h5 class="card-title fw-bold">Product and Brand Consideration</h5>
+                        <p class="card-text text-muted">Encourage people to explore your products or services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 objective-card" data-objective="Brand Awareness and Reach">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">📢</div>
+                        <h5 class="card-title fw-bold">Brand Awareness and Reach</h5>
+                        <p class="card-text text-muted">Reach a broad audience to build awareness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg w-100" id="continue-button" disabled>Continue</button>
+        </div>
+    </div>
+
+    <!-- Second Section: Campaign Type -->
+    <div class="container py-5 section-hidden" id="campaign-type-section">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Select a campaign type</h1>
+            <p class="text-muted">Choose the most suitable campaign type for your objective.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Campaign Type Cards -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 campaign-card" data-type="Search">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🔍</div>
+                        <h5 class="card-title fw-bold">Search</h5>
+                        <p class="card-text text-muted">Get in front of high-intent customers at the right time on
+                            Google Search.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 campaign-card" data-type="Performance Max">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">📊</div>
+                        <h5 class="card-title fw-bold">Performance Max</h5>
+                        <p class="card-text text-muted">Reach audiences across all of Google with a single campaign.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 campaign-card" data-type="Video">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🎥</div>
+                        <h5 class="card-title fw-bold">Video</h5>
+                        <p class="card-text text-muted">Engage audiences on YouTube with visually compelling campaigns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 campaign-card" data-type="Display">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🖼</div>
+                        <h5 class="card-title fw-bold">Display</h5>
+                        <p class="card-text text-muted">Show your ads across the web to grow brand awareness.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 campaign-card" data-type="Shopping">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🛍</div>
+                        <h5 class="card-title fw-bold">Shopping</h5>
+                        <p class="card-text text-muted">Promote your products to interested shoppers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg w-100" id="final-continue-button" disabled>Continue</button>
+        </div>
+    </div>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+        const objectiveCards = document.querySelectorAll('.objective-card');
+        const campaignCards = document.querySelectorAll('.campaign-card');
+        const continueButton = document.getElementById('continue-button');
+        const finalContinueButton = document.getElementById('final-continue-button');
+        const campaignTypeSection = document.getElementById('campaign-type-section');
+
+        let selectedObjective = null;
+        let selectedCampaign = null;
+
+        objectiveCards.forEach(card => {
+            card.addEventListener('click', () => {
+                objectiveCards.forEach(card => card.classList.remove('selected'));
+                card.classList.add('selected');
+                selectedObjective = card.dataset.objective;
+                continueButton.disabled = false;
+            });
+        });
+
+        campaignCards.forEach(card => {
+            card.addEventListener('click', () => {
+                campaignCards.forEach(card => card.classList.remove('selected'));
+                card.classList.add('selected');
+                selectedCampaign = card.dataset.type;
+                finalContinueButton.disabled = false;
+            });
+        });
+
+        continueButton.addEventListener('click', () => {
+            campaignTypeSection.classList.remove('section-hidden');
+            campaignTypeSection.classList.add('section-visible');
+            campaignTypeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    
+  
+
+    
+</body>
+{% endblock %}
+
+</html>

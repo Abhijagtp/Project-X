@@ -1,0 +1,298 @@
+{% extends 'dashboard.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduport - Learning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    {% load static %}
+
+    
+</head>
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/course.css' %}">
+<body class="bg-light">
+    <div class="container my-4">
+        <div class="training-banner">
+
+        </div>
+        <div class="training-searchbar my-4">
+            <div class="input-group">
+                <span class="input-group-text bg-transparent border-0 position-absolute" style="z-index: 10;">
+                    <i class="bi bi-search"></i>
+                </span>
+                <input type="text" class="form-control ps-5 py-2 rounded-5" id="search-input"
+                    placeholder="Search courses or projects..." aria-label="Search courses or projects">
+            </div>
+        </div>
+        <div class="tabs">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="recent-courses-tab" data-bs-toggle="tab"
+                        data-bs-target="#recent-courses" type="button" role="tab" aria-controls="recent-courses"
+                        aria-selected="true">Recent Courses</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="completed-project-tab" data-bs-toggle="tab"
+                        data-bs-target="#completed-project" type="button" role="tab" aria-controls="completed-project"
+                        aria-selected="false">Completed Project</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="recent-courses" role="tabpanel"
+                    aria-labelledby="recent-courses-tab">
+                    <!-- Recent Courses content here -->
+                </div>
+                <div class="tab-pane fade" id="completed-project" role="tabpanel"
+                    aria-labelledby="completed-project-tab">
+                    <!-- Completed Project content here -->
+                </div>
+            </div>
+        </div>
+        <!--Course  -->
+        <div class="course-status x-scroll mt-4">
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified Solutions Architect">
+                </div>
+                <div class="course-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <div class="progress-wrapper">
+                        <p class="course-progress">Completed 70%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified Solutions Architect">
+                </div>
+                <div class="course-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <div class="progress-wrapper">
+                        <p class="course-progress">Completed 70%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified Solutions Architect">
+                </div>
+                <div class="course-details">
+                    <h5>AWS Certified Solutions Architect</h5>
+                    <div class="progress-wrapper">
+                        <p class="course-progress">Completed 70%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="UI/UX Certification">
+                </div>
+                <div class="course-details">
+                    <h5>UI/UX Certification</h5>
+                    <div class="progress-wrapper">
+                        <p class="course-progress">Completed 70%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.pexels.com/photos/4195504/pexels-photo-4195504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Course 3">
+                </div>
+                <div class="course-details">
+                    <h5>AWS Course 3</h5>
+                    <div class="progress-wrapper">
+                        <p class="course-progress">Completed 50%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row gap-5">
+            <!-- Weekly Goal Scheduler Section -->
+            <div class="col-md-6 col-12 weekly-goal mt-4">
+                <h4 class="mb-4">Weekly Goal Scheduler</h4>
+                <p>Master new skills, earn your badge, and unlock endless opportunities—one course at a time.</p>
+                <div class="goal-days mb-5">
+                    <span>MON</span>
+                    <span class="active">TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+                </div>
+            </div>
+
+            <!-- Messages Mentor Section -->
+            <div class="col-md-4 col-12 messages-mentor mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6>Messages</h6>
+                    <div>
+                        <i class="ri-edit-line me-2" style="cursor: pointer;" title="Edit"></i>
+                        <i class="ri-message-2-line" style="cursor: pointer;" title="New Message"></i>
+                    </div>
+                </div>
+                <div class="position-relative mb-3">
+                    <input type="text" class="form-control rounded-4 ps-5" placeholder="Search messages"
+                        aria-label="Search messages">
+                    <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                </div>
+
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZ7-RvuHkigDuiCePGwq4m4UY-rqVV9s4cQ&s"
+                            alt="Joy Iogo - UI/UX Designer" class="group-logo">
+                        <span class="ms-2">Joy Iogo - UI/UX Designer</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtiOS4bu993VNbG4v2lYnjv3fNA1ops7KvoQ&s"
+                            alt="Levi - Business Consultant" class="group-logo">
+                        <span class="ms-2">Levi - Business Consultant</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRU3ycR2KAcoNgkaVSws3UP7Qhhr5aBuDzw&s"
+                            alt="Finn - UI/UX Designer" class="group-logo">
+                        <span class="ms-2">Finn - UI/UX Designer</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYGms-R_qMUpJinj8QUyWbIYsvNWVJ1E30cw&s"
+                            alt="Rajani Ukey - Fashion Designer" class="group-logo">
+                        <span class="ms-2">Rajani Ukey - Fashion Designer</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTevJnBO6sElaLQu0K8moM7q1hRdf47-Z97A&s"
+                            alt="Kaveri Sharma - Doctor" class="group-logo">
+                        <span class="ms-2">Kaveri Sharma - Doctor</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="container mt-4">
+            <h4 class="mb-3">Featured Courses</h4>
+            <div class="featured-courses x-scroll d-flex gap-3">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/5940718/pexels-photo-5940718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified solutions Architect" class="card-image">
+                    <div class="card-content">
+                        <button class="buy-now">Buy Now</button>
+                        <h3 class="card-title">AWS Certified solutions Architect</h3>
+                        <p class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                        <div class="card-footer">
+                            <span class="rating">⭐ 4.9</span>
+                            <span class="price">
+                                <del>$100</del>
+                                <strong>$80</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/5940718/pexels-photo-5940718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified solutions Architect" class="card-image">
+                    <div class="card-content">
+                        <button class="buy-now">Buy Now</button>
+                        <h3 class="card-title">AWS Certified solutions Architect</h3>
+                        <p class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                        <div class="card-footer">
+                            <span class="rating">⭐ 4.9</span>
+                            <span class="price">
+                                <del>$100</del>
+                                <strong>$80</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/5940718/pexels-photo-5940718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="AWS Certified solutions Architect" class="card-image">
+                    <div class="card-content">
+                        <button class="buy-now">Buy Now</button>
+                        <h3 class="card-title">AWS Certified solutions Architect</h3>
+                        <p class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        </p>
+                        <div class="card-footer">
+                            <span class="rating">⭐ 4.9</span>
+                            <span class="price">
+                                <del>$100</del>
+                                <strong>$80</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>const courseStatus = document.querySelector('.course-status');
+        let isMouseDown = false;
+        let startX, scrollLeft;
+
+        courseStatus.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX - courseStatus.offsetLeft;
+            scrollLeft = courseStatus.scrollLeft;
+        });
+
+        courseStatus.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+        });
+
+        courseStatus.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        courseStatus.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            const x = e.pageX - courseStatus.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed multiplier
+            courseStatus.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+  
+</body>
+{% endblock %}
+</html>
