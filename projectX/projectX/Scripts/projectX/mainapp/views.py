@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 def landing_page(request):
     """Render landing page."""
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 def register_view(request):
